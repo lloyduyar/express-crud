@@ -1,4 +1,7 @@
 window.onload = fetchDatabaseEntries();
+setInterval(() => {
+  fetchDatabaseEntries();
+}, 1000);
 
 const submitButton = document.querySelector(".submitBTN");
 /* setInterval(() => {
