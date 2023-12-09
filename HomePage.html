@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="/foundation.css" />
+  <link rel="stylesheet" href="tachyons.min.css" />
+  <title>NEDB Database Project</title>
+</head>
+
+<body>
+  <!--InfoBar Start-->
+  <div class="title-bar" id="title-bar" data-responsive-toggle="" data-hide-for="small"
+    style="background-color: black; color: white; height: 3rem" >
+    <button class="" type="button" data-toggle></button>
+    <div class="title-bar-title"><span style="color:white">BETA</span>  |  <span id="dateAndTime"></span></div>
+  </div>
+  <!--InfoBar End-->
+  <div id="stickyNav">
+    <!--NavBar Start-->
+    <div class="top-bar" id="" style="height: 5.2rem; background-color: rgb(71, 71, 218);">
+      <div class="top-bar-left">
+        <ul class="menu" data-responsive-menu="accordion" style="background-color: rgb(71, 71, 218)">
+          <li class="menu-text" id="">NEDB Test</li>
+          <li class="menu-text" id="labelform" title="Click Me For Help">Help</li>
+          <li class="menu-text" id="deleteAll" title="Delete All Entries From The Database" onclick="clear()">Clear Database</li>
+        </ul>
+      </div>
+    </div>
+    <!--NavBar End-->
+  </div>
+
+  <div class="body">
+    <h1 id="title">NEDB Database Test</h1>
+    <div id="infocallout"></i>
+      <p id="description">This project takes user input from a form and post it to a express server that saves it into a
+        nedb database.</p>
+    </div>
+    <div id="form">
+      <form class="login-form" action="/submit" method="post">
+        <h1 id="formTitle">Test Entry</h1>
+        <div class="form-input-material">
+          <label for="username" id="label1">Username</label>
+          <input type="text" name="username" id="username" placeholder=" " autocomplete="off" class="form-control-material" min="2" max="20" onkeypress="return (event.charCode != 32);" required/>
+        </div>
+        <div class="form-input-material">
+          <label for="message" id="label2">Message</label>
+          <input type="text" name="message" id="message" placeholder=" " autocomplete="off" class="form-control-material" min="1" max="100" required/>
+        </div>
+        <button type="submit" class="">Submit To Database</button>
+      </form>
+    </div>
+  </div>
+  <br>
+<hr>
+<br>
+  <h1 id="title">All Database Entries</h1>
+
+  <div class="databaseDiv">
+  </div>
+
+  <!--<div class="entries">
+  <span class="usernames" id="usernames" contenteditable="true">Jason Vorhees</span>
+    <br>
+    <br>
+    <span class="messages" id="messages" contenteditable="true">Hey there, im Jason Vorhees. How are you?</span>
+    <br>
+    <br>
+    <button class="submitBTN" type="button">Submit</button>
+  </div>-->
+
+  <script src="app.js"></script>
+  <script src="validate.js"></script>
+  <script src="foundation.min.js"></script>
+  <script src="jquery.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
