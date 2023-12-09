@@ -22,7 +22,7 @@
   "description": "idkyet",
   "main": "/js/routing.js",
   "scripts": {
-    "test": "nodemon routing.js"
+    "start": "node routing.js"
   },
   "repository": {
     "type": "git",
