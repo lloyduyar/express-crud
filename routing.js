@@ -35,6 +35,7 @@ app.get("/getEntries", (req, res) => {
     if (results.length != 0) {
       res.json(results);
       console.log(results);
+      res.redirect("/");
       console.log("There are/is " + results.length + " database entries!");
     } else {
       res.json([]);
