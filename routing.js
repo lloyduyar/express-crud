@@ -8,6 +8,8 @@ let Datastore = require("nedb"),
   db = new Datastore({ filename: "database.db", autoload: true });
 const watcher = chokidar.watch("database.db");
 const app = express();
+require("dotenv").config();
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("dependencies", { root: __dirname }));
@@ -92,8 +94,8 @@ app.delete("/removeIndividual", (req, res) => {
   res.redirect("/");
 });
 
-app.listen(3000, () => {
-  console.log("Server on port 3000");
+app.listen(port, () => {
+  console.log("Server on port " + port);
 });
 
 module.exports = app;
