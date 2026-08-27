@@ -1,2 +1,2 @@
-# crud application built in the javascript ecosystem.
-A simple CRUD app built with nodejs, nedb, express and more.
+# Crud Application Built in the Javascript Ecosystem.
+A Simple CRUD app built with Nodejs, Nedb, Express and more.
