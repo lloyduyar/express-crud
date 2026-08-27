@@ -17,21 +17,21 @@
     "passport": "^0.7.0",
     "socket.io": "^4.7.2"
   },
-  "name": "idkyet",
+  "name": "basic_crud_app",
   "version": "1.0.0",
-  "description": "idkyet",
+  "description": "",
   "main": "/js/routing.js",
   "scripts": {
     "start": "node routing.js"
   },
   "repository": {
     "type": "git",
-    "url": "idk"
+    "url": ""
   },
   "keywords": [
-    "idk"
+    ""
   ],
-  "author": "idk",
+  "author": "LloydUrey",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^3.0.1"
